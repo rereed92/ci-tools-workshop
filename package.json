@@ -1,0 +1,25 @@
+{
+  "name": "ci-tools-workshop",
+  "version": "0.1.0",
+  "author": {
+    "name": "Alex Canessa"
+  },
+  "main": "./src/index.js",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexcanessa/ci-tools-workshop.git"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-eslint": "^19.0.0",
+    "eslint": "^3.6.0",
+    "eslint-config-standard": "^6.0.1",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {}
+}

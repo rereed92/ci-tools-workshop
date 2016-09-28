@@ -1,0 +1,22 @@
+{
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "impliedStrict": true
+        },
+        "allowImportExportEverywhere": false
+    },
+    "rules": {
+        "semi": [2, "always"],
+        "no-empty": 2,
+        "array-callback-return": 2,
+        "indent": [2, 4, { "SwitchCase": 1 }],
+        "space-before-function-paren": [2, "never"],
+        "no-debugger": 0
+    }
+}
