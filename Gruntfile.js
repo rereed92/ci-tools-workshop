@@ -2,7 +2,7 @@
 
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-eslint');
-    grunt.loadNpmTasks('grunt-scss-lint');
+    grunt.loadNpmTasks('grunt-sass-lint');
     grunt.loadNpmTasks('grunt-mocha-test');
 
     grunt.initConfig({
@@ -16,13 +16,13 @@ module.exports = function(grunt) {
                 'src/**/*.js'
             ]
         },
-        scsslint: {
+        sasslint: {
             allFiles: [
                 'src/**/*.scss'
             ],
             options: {
                 bundleExec: false,
-                config: '.scss-lint.yml'
+                config: '.sass-lint.yml'
             }
         },
         mochaTest: {
@@ -36,5 +36,5 @@ module.exports = function(grunt) {
             }
         }
     });
-    grunt.registerTask('test', ['eslint', 'scsslint', 'mochaTest']);
+    grunt.registerTask('test', ['eslint', 'sasslint', 'mochaTest']);
 };
