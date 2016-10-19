@@ -2,14 +2,14 @@ export default class Utils {
 
     date(date) {
 
-    	if (!(typeof(date) === 'object')) return 'Invalid Date';
-    	if (isNaN(date.getDate())) return 'Invalid Date';
+        if (!(typeof(date) === 'object')) return 'Invalid Date';
+        if (isNaN(date.getDate())) return 'Invalid Date';
 
-    	let newDate = date.getDate();
-    	let newMonth = date.getMonth() + 1;
-    	let newYear = date.getFullYear();
+        let newDate = date.getDate();
+        let newMonth = date.getMonth() + 1;
+        let newYear = date.getFullYear();
 
-    	if (newDate < 10) {
+        if (newDate < 10) {
            newDate = '0' + newDate;
         }
 
@@ -17,7 +17,7 @@ export default class Utils {
            newMonth = '0' + newMonth;
         }
 
-    	return `${newDate}/${newMonth}/${newYear}`;
+        return `${newDate}/${newMonth}/${newYear}`;
     }
 
 }
