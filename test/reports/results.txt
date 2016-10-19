@@ -1,0 +1,10 @@
+
+[0m[0m
+[0m  Utils[0m
+[0m    Date[0m
+    [32m  ✓[0m[90m Should return the date[0m
+    [32m  ✓[0m[90m Should return error[0m
+
+
+[92m [0m[32m 2 passing[0m[90m (7ms)[0m
+
