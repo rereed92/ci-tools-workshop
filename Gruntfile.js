@@ -47,5 +47,5 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('test', ['eslint', 'sasslint', 'mochaTest', 'mocha_istanbul']);
+    grunt.registerTask('test', ['eslint', 'sasslint', 'mocha_istanbul']);
 };
