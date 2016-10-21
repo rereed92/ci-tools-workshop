@@ -5,6 +5,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass-lint');
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-mocha-istanbul');
+    grunt.loadNpmTasks('grunt-browserify');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -44,8 +45,18 @@ module.exports = function(grunt) {
                     require: ['babel-register']
                 }
             }
+        },
+        browserify: {
+            development: {
+                src: ['src/utils.js'],
+                dest: 'src/app.js',
+                options: {
+                    browserifyOptions: { debug: true },
+                    transform: [['babelify', { 'presets': ['es2015'] }]]
+                }
+            }
         }
     });
 
-    grunt.registerTask('test', ['eslint', 'sasslint', 'mocha_istanbul']);
+    grunt.registerTask('test', ['eslint', 'sasslint', 'mocha_istanbul', 'browserify']);
 };
