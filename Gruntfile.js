@@ -15,7 +15,8 @@ module.exports = function(grunt) {
             },
             target: [
                 'Gruntfile.js',
-                'src/**/*.js'
+                'src/index.js',
+                'src/utils.js'
             ]
         },
         sasslint: {
