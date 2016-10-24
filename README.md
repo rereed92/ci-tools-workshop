@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/rereed92/ci-tools-workshop.svg?branch=master)](https://travis-ci.org/rereed92/ci-tools-workshop)
 
+[![codecov](https://codecov.io/gh/rereed92/ci-tools-workshop/branch/master/graph/badge.svg)](https://codecov.io/gh/rereed92/ci-tools-workshop)
+
+
 Workshop repo, created to help the explanation of several code sessions in a CI tools workshop
 
 ## Getting started
