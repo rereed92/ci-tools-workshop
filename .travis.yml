@@ -16,3 +16,4 @@ before_install:
 
 after_success:
   - codecov --file test/coverage/lcov.info --disable search
+  - bash <(curl -s https://codecov.io/bash)
