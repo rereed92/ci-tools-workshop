@@ -4,10 +4,6 @@ language:
 node_js:
   - "5.1"
 
-install:
-  - chmod u+x ./travis/install.sh
-  - . travis/install.sh
-
 before_script:
   - npm install grunt-cli -g
   - npm install
@@ -15,4 +11,9 @@ before_script:
 script:
   - grunt test
 
+before_install:
+  - pip install --user codecov
 
+after_success:
+  - codecov --file test/coverage/lcov.info --disable search
+  - bash <(curl -s https://codecov.io/bash)
