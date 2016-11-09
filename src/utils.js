@@ -1,6 +1,6 @@
 export default class Utils {
 
-    date(date) {
+    getDate(date) {
         if (!(typeof (date) === 'object')) return 'Invalid Date';
         if (isNaN(date.getDate())) return 'Invalid Date';
 
@@ -17,6 +17,14 @@ export default class Utils {
         }
 
         return `${newDate}/${newMonth}/${newYear}`;
+    }
+
+    getFilename(path = '') {
+        if (typeof path !== 'string') {
+            return 'Not a string';
+        }
+
+        return path.split('/').pop();
     }
 
 }
