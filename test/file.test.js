@@ -20,6 +20,10 @@ describe ('File', () => {
 			assert.equal(file.readTxt(true), '', 'Boolean passed');
 			assert.equal(file.readTxt(123), '', 'Numbers passed');
 		});
+
+		it ('Should not append a second .txt when present in the filename', () => {
+			assert.equal(file.readTxt('file.txt'), 'This is the content from the file', 'Pass a file with the extension')
+		});
 	});
 
 	afterEach(() => {
