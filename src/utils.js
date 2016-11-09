@@ -20,7 +20,7 @@ export default class Utils {
     }
 
     getFilename(path = '') {
-        if (typeof path !== 'string') {
+        if (typeof path !== 'string' || !path.match(/\.\w+$/g)) {
             return 'Not a string';
         }
 
