@@ -6,6 +6,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-mocha-istanbul');
     grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-php');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -56,8 +57,20 @@ module.exports = function(grunt) {
                     transform: [['babelify', { 'presets': ['es2015'] }]]
                 }
             }
+        },
+        php: {
+            dist: {
+                options: {
+                    hostname: '127.0.0.1',
+                    port: 9000,
+                    base: 'public',
+                    keepalive: true,
+                    open: true
+                }
+            }
         }
     });
 
     grunt.registerTask('test', ['eslint', 'sasslint', 'mocha_istanbul', 'browserify']);
+    grunt.registerTask('serve', ['php:dist']);
 };
